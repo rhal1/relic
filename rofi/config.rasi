@@ -1,0 +1,176 @@
+/* colors */
+
+* {
+     bg:				rgba(0, 0, 0); /* background */
+     fg:				#ffffff; /*forground*/
+     tc:				#ffffff; /*text color*/
+     tp:				rgba(0, 0, 0, 0); /* transparent */
+}
+
+
+
+configuration {
+lines:					10;
+columns:				1;
+font: 					"Ac437 ATI 9x8 12";
+    bw: 				0;
+    location: 				0;
+    padding: 				0;
+    fixed-num-lines: 			true;
+    show-icons: 			true;
+    sidebar-mode: 			true;
+    separator-style: 			"beam";
+    hide-scrollbar: 			true;
+    scroll-method: 			1;
+    click-to-exit: 			true;
+    show-match: 			false;
+    combi-hide-mode-prefix: 		false;
+    display-window: 			"Window";
+    display-windowcd: 			"Windowcd";
+    display-run: 			">_";
+    display-ssh: 			"~$";
+    display-drun: 			">";
+    display-combi: 			"Combi";
+}
+
+window {
+transparency:                   	"real";
+border-radius:                  	0px;
+location:                       	center;
+x-offset:                       	0px;
+y-offset:                       	0px;
+background-color:			@bg;
+}
+
+window {
+    border: 				2px;
+    border-color: 			@tc;
+    border-radius: 			0px;
+    padding: 				20;
+    width: 				30%;
+    height:				60%;
+}
+
+prompt {
+    spacing: 				0;
+    border: 				0;
+    text-color: 			@tc;
+}
+
+textbox-prompt-colon {
+    expand: 				false;
+    str: 				"  ";
+    margin:				0px 4px 0px 0px;
+    text-color: 			inherit;
+}
+
+entry {
+    spacing:    			0;
+    text-color: 			@tc;
+}
+
+case-indicator {
+    spacing:    			0;
+    text-color: 			@tc;
+}
+
+inputbar {
+    spacing:    			0px;
+    text-color: 			@tc;
+    padding:    			1px;
+    children: 				[ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+mainbox {
+    border: 				0px;
+    border-color: 			@bg;
+    padding: 				6;
+}
+
+listview {
+    fixed-height: 			0;
+    border: 				0px;
+    border-color: 			@fg;
+    spacing: 				0px;
+    scrollbar: 				false;
+    padding: 				5px 5px 0px 5px;
+}
+
+element {
+    border: 				0px;
+    border-radius: 			0px;
+    padding: 				10px;
+}
+element normal.normal {
+    background-color: 			@tp;
+    text-color:       			@tc;
+}
+element selected.normal {
+    background-color: 			@tp;
+    text-color:       			@tc;
+    border:				2px;
+    border-color:			@tc;
+    padding:				5px;
+}
+element selected.urgent {
+    background-color: 			@bg;
+    text-color:       			@red;
+}
+element selected.active {
+    background-color: 			@tp;
+    text-color:       			@bg;
+}
+element alternate.normal {
+    background-color: 			@tp;
+    text-color:       			@fg;
+}
+element alternate.urgent {
+    background-color: 			@bg;
+    text-color:       			@fg;
+}
+element alternate.active {
+    background-color: 			@bg;
+    text-color:       			@fg;
+}
+
+sidebar {
+    border:       			0px;
+    border-color: 			@bg;
+    border-radius: 			0px;
+}
+
+button {
+    background-color:             	@tp;
+    margin: 				10px;
+    padding: 				5px;
+    text-color: 			@fg;
+    border: 				2px;
+    border-radius: 			0px;
+    border-color: 			#707880;
+}
+
+button selected {
+    background-color:             	@tp;
+    text-color: 			@tc;
+    border:	 			2px;
+    border-radius: 			0px;
+    border-color: 			@fg;
+}
+
+scrollbar {
+    width:        			4px;
+    border:       			0px;
+    handle-color: 			@fg;
+    handle-width: 			8px;
+    padding:      			0;
+}
+
+message {
+    border: 				0px;
+    border-color: 			@fg;
+    padding: 				1px;
+}
+
+textbox {
+    text-color: 			@fg;
+}
